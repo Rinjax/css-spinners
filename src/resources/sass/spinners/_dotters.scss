@@ -1,0 +1,102 @@
+.dotter {
+
+  position: relative;
+  margin: 1rem 2rem;
+  display: inline-block;
+
+  span{
+    height: 10px;
+    width: 10px;
+    position: absolute;
+    background-color: $spinner-background;
+    border-radius: 50%;
+  }
+
+}
+
+.dotter-1{
+  span{
+    &:nth-child(1){
+      left: -15px;
+      animation: dotter-wave 1s ease-in-out infinite;
+
+    }
+
+    &:nth-child(2){
+      animation: dotter-wave 1s ease-in-out 0.33s infinite;
+    }
+
+    &:nth-child(3){
+      left: 15px;
+      animation: dotter-wave 1s ease-in-out 0.66s infinite;
+    }
+  }
+}
+
+.dotter-2{
+  span{
+    &:nth-child(1){
+      left: -15px;
+      animation: dotter-jump 1s ease-in-out infinite;
+
+    }
+
+    &:nth-child(2){
+      animation: dotter-jump 1s ease-in-out 0.33s infinite;
+    }
+
+    &:nth-child(3){
+      left: 15px;
+      animation: dotter-jump 1s ease-in-out 0.66s infinite;
+    }
+  }
+}
+
+.dotter-3{
+  span{
+    &:nth-child(1){
+      left: -15px;
+      animation: dotter-wave-color 1s ease-in-out infinite;
+
+    }
+
+    &:nth-child(2){
+      animation: dotter-wave-color 1s ease-in-out 0.33s infinite;
+    }
+
+    &:nth-child(3){
+      left: 15px;
+      animation: dotter-wave-color 1s ease-in-out 0.66s infinite;
+    }
+  }
+}
+
+
+
+
+@keyframes dotter-wave {
+  0%, 100%{
+    transform: translateY(0px);
+  }
+  50%{transform: translateY(-10px)}
+}
+
+@keyframes dotter-jump {
+  0%, 50%, 100%{
+    transform: translateY(0px);
+  }
+  25%{
+    transform: translateY(-15px)
+  }
+}
+
+@keyframes dotter-wave-color {
+  0%, 100%{
+    background-color: $spinner-background;
+    transform: translateY(0px);
+  }
+  50%{
+    background-color: $spinner-color;
+    transform: translateY(-10px);
+  }
+}

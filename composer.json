@@ -1,0 +1,12 @@
+{
+    "name": "rinjax/css-spinners",
+    "description": "css spinners and loaders",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Rinjax",
+            "email": "steve@encara.co.uk"
+        }
+    ],
+    "require": {}
+}
